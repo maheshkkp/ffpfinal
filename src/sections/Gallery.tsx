@@ -19,7 +19,7 @@ const galleryImages = [
     alt: 'Wooden cabinet with glass doors'
   },
   {
-    src: '/images/gallery/5.jpg',
+    src: '/images/gallery/5.jpeg',
     alt: 'Custom wood staining project'
   },
   {
