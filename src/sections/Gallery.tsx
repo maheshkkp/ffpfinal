@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const galleryImages = [
   {
@@ -40,6 +40,31 @@ const Gallery: React.FC = () => {
     setSelectedImage(null);
     document.body.style.overflow = 'auto';
   };
+
+  const showNextImage = () => {
+    if (selectedImage !== null) {
+      setSelectedImage((selectedImage + 1) % galleryImages.length);
+    }
+  };
+
+  const showPrevImage = () => {
+    if (selectedImage !== null) {
+      setSelectedImage((selectedImage - 1 + galleryImages.length) % galleryImages.length);
+    }
+  };
+
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (selectedImage !== null) {
+      if (event.key === 'ArrowRight') showNextImage();
+      if (event.key === 'ArrowLeft') showPrevImage();
+      if (event.key === 'Escape') closeLightbox();
+    }
+  };
+
+  React.useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selectedImage]);
   
   return (
     <section id="gallery" className="py-20 bg-gray-50">
@@ -75,19 +100,46 @@ const Gallery: React.FC = () => {
         
         {/* Lightbox */}
         {selectedImage !== null && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center p-4">
-            <button 
-              className="absolute top-4 right-4 text-white"
-              onClick={closeLightbox}
-            >
-              <X size={32} />
-            </button>
-            
-            <img 
-              src={galleryImages[selectedImage].src} 
-              alt={galleryImages[selectedImage].alt} 
-              className="max-w-full max-h-[90vh] object-contain"
-            />
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center">
+            <div className="relative w-full h-full flex items-center justify-center p-4">
+              {/* Close button */}
+              <button 
+                className="absolute top-4 right-4 text-white p-2 hover:bg-white/10 rounded-full transition-colors"
+                onClick={closeLightbox}
+              >
+                <X size={32} />
+              </button>
+
+              {/* Previous button */}
+              <button
+                className="absolute left-4 text-white p-2 hover:bg-white/10 rounded-full transition-colors"
+                onClick={showPrevImage}
+              >
+                <ChevronLeft size={32} />
+              </button>
+
+              {/* Next button */}
+              <button
+                className="absolute right-4 text-white p-2 hover:bg-white/10 rounded-full transition-colors"
+                onClick={showNextImage}
+              >
+                <ChevronRight size={32} />
+              </button>
+
+              {/* Image */}
+              <div className="relative max-w-[90vw] max-h-[90vh]">
+                <img 
+                  src={galleryImages[selectedImage].src} 
+                  alt={galleryImages[selectedImage].alt} 
+                  className="max-w-full max-h-[90vh] object-contain"
+                />
+                
+                {/* Image counter */}
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 text-white px-4 py-2 rounded-full">
+                  {selectedImage + 1} / {galleryImages.length}
+                </div>
+              </div>
+            </div>
           </div>
         )}
       </div>
