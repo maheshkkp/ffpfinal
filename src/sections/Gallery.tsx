@@ -3,29 +3,54 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const galleryImages = [
   {
-    src: '/images/gallery/1.jpeg',
+    src: '/images/gallery/G1.jpeg',
     alt: 'Elegant wooden dresser'
   },
   {
-    src: '/images/gallery/2.jpeg',
+    src: '/images/gallery/G2.jpeg',
     alt: 'Modern interior with wooden elements'
   },
   {
-    src: '/images/gallery/3.jpeg',
+    src: '/images/gallery/G3.jpeg',
     alt: 'Restored wooden dining table'
   },
   {
-    src: '/images/gallery/4.jpeg',
+    src: '/images/gallery/G4.jpeg',
     alt: 'Wooden cabinet with glass doors'
   },
   {
-    src: '/images/gallery/5.jpeg',
+    src: '/images/gallery/G5.jpeg',
     alt: 'Custom wood staining project'
   },
   {
-    src: '/images/gallery/6.jpeg',
+    src: '/images/gallery/G6.jpeg',
+    alt: 'Polished wood floor'
+  },
+  {
+    src: '/images/gallery/G7.jpeg',
+    alt: 'Polished wood floor'
+  },
+  {
+    src: '/images/gallery/G8.jpeg',
+    alt: 'Polished wood floor'
+  },
+  {
+    src: '/images/gallery/G9.jpeg',
+    alt: 'Polished wood floor'
+  },
+  {
+    src: '/images/gallery/G10.jpeg',
+    alt: 'Polished wood floor'
+  },  
+  {
+    src: '/images/gallery/G11.jpeg',
+    alt: 'Polished wood floor'
+  },
+  {
+    src: '/images/gallery/G12.jpeg',
     alt: 'Polished wood floor'
   }
+  
 ];
 
 const Gallery: React.FC = () => {
