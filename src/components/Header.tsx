@@ -30,7 +30,7 @@ const Header: React.FC = () => {
           {/* Logo */}
           <a href="#" className="flex items-center">
             <img
-                src="/logo (2).png" // Update this path to your logo file
+                src="/images/logo1.png"
                 alt="French Finish Pro Logo"
                 className={`h-8 md:h-12 transition-all duration-300 ${
                     isScrolled ? 'h-8' : 'h-12'
