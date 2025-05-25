@@ -3,55 +3,55 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const galleryImages = [
   {
-    src: '/images/gallery/G1.jpeg',
+    src: `${import.meta.env.BASE_URL}images/gallery/G1.jpeg`,
     alt: 'Elegant wooden dresser'
   },
   {
-    src: '/images/gallery/G2.jpeg',
+    src: `${import.meta.env.BASE_URL}images/gallery/G2.jpeg`,
     alt: 'Modern interior with wooden elements'
   },
   {
-    src: '/images/gallery/G3.jpeg',
+    src: `${import.meta.env.BASE_URL}images/gallery/G3.jpeg`,
     alt: 'Restored wooden dining table'
   },
   {
-    src: '/images/gallery/G4.jpeg',
+    src: `${import.meta.env.BASE_URL}images/gallery/G4.jpeg`,
     alt: 'Wooden cabinet with glass doors'
   },
   {
-    src: '/images/gallery/G5.jpeg',
+    src: `${import.meta.env.BASE_URL}images/gallery/G5.jpeg`,
     alt: 'Custom wood staining project'
   },
   {
-    src: '/images/gallery/G6.jpeg',
+    src: `${import.meta.env.BASE_URL}images/gallery/G6.jpeg`,
     alt: 'Polished wood floor'
   },
   {
-    src: '/images/gallery/G7.jpeg',
+    src: `${import.meta.env.BASE_URL}images/gallery/G7.jpeg`,
     alt: 'Polished wood floor'
   },
   {
-    src: '/images/gallery/G8.jpeg',
+    src: `${import.meta.env.BASE_URL}images/gallery/G8.jpeg`,
     alt: 'Polished wood floor'
   },
   {
-    src: '/images/gallery/G9.jpeg',
+    src: `${import.meta.env.BASE_URL}images/gallery/G9.jpeg`,
     alt: 'Polished wood floor'
   },
   {
-    src: '/images/gallery/G10.jpeg',
-    alt: 'Polished wood floor'
-  },  
-  {
-    src: '/images/gallery/G11.jpeg',
+    src: `${import.meta.env.BASE_URL}images/gallery/G10.jpeg`,
     alt: 'Polished wood floor'
   },
   {
-    src: '/images/gallery/G12.jpeg',
+    src: `${import.meta.env.BASE_URL}images/gallery/G11.jpeg`,
+    alt: 'Polished wood floor'
+  },
+  {
+    src: `${import.meta.env.BASE_URL}images/gallery/G12.jpeg`,
     alt: 'Polished wood floor'
   }
-  
 ];
+
 
 const Gallery: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);

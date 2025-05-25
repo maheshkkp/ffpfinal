@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 
 const heroImages = [
-    '/images/1.jpeg',
-    '/images/2.jpeg',
-    '/images/3.jpeg',
-    '/images/4.jpeg',
-    '/images/5.jpeg',
-    '/images/6.jpeg',
-    '/images/7.jpeg',
-    '/images/8.jpeg',
-    '/images/9.jpeg',
-    '/images/10.jpeg'
+    `${import.meta.env.BASE_URL}images/1.jpeg`,
+    `${import.meta.env.BASE_URL}images/2.jpeg`,
+    `${import.meta.env.BASE_URL}images/3.jpeg`,
+    `${import.meta.env.BASE_URL}images/4.jpeg`,
+    `${import.meta.env.BASE_URL}images/5.jpeg`,
+    `${import.meta.env.BASE_URL}images/6.jpeg`,
+    `${import.meta.env.BASE_URL}images/7.jpeg`,
+    `${import.meta.env.BASE_URL}images/8.jpeg`,
+    `${import.meta.env.BASE_URL}images/9.jpeg`,
+    `${import.meta.env.BASE_URL}images/10.jpeg`
 ];
 
 const Hero: React.FC = () => {
