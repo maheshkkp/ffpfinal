@@ -49,6 +49,10 @@ const galleryImages = [
   {
     src: `${import.meta.env.BASE_URL}images/gallery/G12.jpeg`,
     alt: 'Polished wood floor'
+  },
+  {
+    src: `${import.meta.env.BASE_URL}images/gallery/013.jpeg`,
+    alt: 'Polished wood floor'
   }
 ];
 

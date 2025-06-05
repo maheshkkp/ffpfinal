@@ -1,5 +1,5 @@
 import React from 'react';
-import { Feather, Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -9,7 +9,6 @@ const Footer: React.FC = () => {
           {/* Logo & Company Info */}
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center mb-4">
-              <Feather className="mr-2 text-amber-500" size={28} />
               <span className="text-xl font-semibold font-serif">French Finish Pro</span>
             </div>
             <p className="text-gray-400 mb-4">
